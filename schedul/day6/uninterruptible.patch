@@ -1,0 +1,11 @@
+--- a/globalfifo.c
++++ b/globalfifo.c
+@@ -114,7 +114,7 @@ static ssize_t globalfifo_read(struct file *filp, char __user *buf,
+ 			ret = -EAGAIN;
+ 			goto out;
+ 		}
+-		__set_current_state(TASK_INTERRUPTIBLE);
++		__set_current_state(TASK_UNINTERRUPTIBLE);
+ 		mutex_unlock(&dev->mutex);
+ 
+ 		schedule();
