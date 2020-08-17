@@ -1,0 +1,67 @@
+barry@barryUbuntu:~/develop/training/multithreads/day4$ strace ./a.out 
+execve("./a.out", ["./a.out"], 0x7fff9bc08630 /* 53 vars */) = 0
+brk(NULL)                               = 0x557da98cc000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=96523, ...}) = 0
+mmap(NULL, 96523, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1c215aa000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`l\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=149696, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1c215a8000
+mmap(NULL, 132288, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1c21587000
+mmap(0x7f1c2158d000, 61440, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f1c2158d000
+mmap(0x7f1c2159c000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7f1c2159c000
+mmap(0x7f1c215a2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7f1c215a2000
+mmap(0x7f1c215a4000, 13504, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1c215a4000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260A\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1996592, ...}) = 0
+mmap(NULL, 2004992, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1c2139d000
+mprotect(0x7f1c213bf000, 1826816, PROT_NONE) = 0
+mmap(0x7f1c213bf000, 1511424, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f1c213bf000
+mmap(0x7f1c21530000, 311296, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x193000) = 0x7f1c21530000
+mmap(0x7f1c2157d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1df000) = 0x7f1c2157d000
+mmap(0x7f1c21583000, 14336, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1c21583000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1c2139a000
+arch_prctl(ARCH_SET_FS, 0x7f1c2139a740) = 0
+mprotect(0x7f1c2157d000, 16384, PROT_READ) = 0
+mprotect(0x7f1c215a2000, 4096, PROT_READ) = 0
+mprotect(0x557da8e09000, 4096, PROT_READ) = 0
+mprotect(0x7f1c215eb000, 4096, PROT_READ) = 0
+munmap(0x7f1c215aa000, 96523)           = 0
+set_tid_address(0x7f1c2139aa10)         = 3090
+set_robust_list(0x7f1c2139aa20, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f1c2158d6c0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f1c21599dd0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f1c2158d750, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f1c21599dd0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+brk(NULL)                               = 0x557da98cc000
+brk(0x557da98ed000)                     = 0x557da98ed000
+write(1, "Default stack size is 8388608; m"..., 48Default stack size is 8388608; minimum is 16384
+) = 48
+write(1, "Default guard size is 4096\n", 27Default guard size is 4096
+) = 27
+mmap(NULL, 20480, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f1c215bd000
+mprotect(0x7f1c215be000, 16384, PROT_READ|PROT_WRITE) = 0  //4K
+clone(child_stack=0x7f1c215c0fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f1c215c19d0, tls=0x7f1c215c1700, child_tidptr=0x7f1c215c19d0) = 3091
+mmap(NULL, 20480, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f1c215b8000
+mprotect(0x7f1c215b9000, 16384, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7f1c215bbfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f1c215bc9d0, tls=0x7f1c215bc700, child_tidptr=0x7f1c215bc9d0) = 3092
+access_overflow 10 0x7f1c215bf6e0
+access_overflow 9 0x7f1c215bf2e0
+access_overflow 8 0x7f1c215beee0
+access_overflow 7 0x7f1c215beae0
+access_overflow 6 0x7f1c215be6e0
+access_overflow 5 0x7f1c215be2e0
+access_overflow 4 0x7f1c215bdee0
++++ killed by SIGSEGV (core dumped) +++
+Segmentation fault (core dumped)
+

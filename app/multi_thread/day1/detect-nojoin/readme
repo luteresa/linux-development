@@ -1,0 +1,1 @@
+g++ -g -fPIC -shared -o nojoin-helper.so nojoin-helper.cpp -ldl
