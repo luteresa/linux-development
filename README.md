@@ -4,7 +4,7 @@
 # 内核层：
 mm:内存管理
 
-schedul:进程调度
+schedule:进程调度
 
 IO:
 
