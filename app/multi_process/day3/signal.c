@@ -9,7 +9,7 @@ void sighandler(int sig)
 
 int main(void)
 {
-	if(signal(SIGINT, sighandler/*SIG_IGN*/)==SIG_ERR){
+	if(signal(SIGINT, /*sighandler*/SIG_IGN)==SIG_ERR){
 		perror("cannot reset the SIGINT signal handler");
 		return 1;
 	}

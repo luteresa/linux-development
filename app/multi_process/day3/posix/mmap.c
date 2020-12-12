@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 	char *p;
 
 	p = (char *)mmap(NULL, 4096, PROT_READ | PROT_WRITE,
-			 MAP_SHARED | MAP_ANONYMOUS, -1, 0); //vma
+			 MAP_SHARED | MAP_ANONYMOUS, -1, 0); //相同vma,shared,物理内存相同；若改为private，虚拟地址相同，物理地址不同
 
 	strcpy(p, "XXXXXXXXXXXXXXXXX");
 

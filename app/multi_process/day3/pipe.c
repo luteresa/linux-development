@@ -17,7 +17,7 @@ int main()
 
 		char *buf = "hello world\n";
 		write(fd[1], buf, strlen(buf) + 1);
-		while (1) ;
+		//while (1) ;
 	} else {
 		close(fd[1]);
 

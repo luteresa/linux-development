@@ -1,0 +1,9 @@
+[Unit]
+Description=my server
+
+[Service]
+ExecStart=/home/leon/work/myHub/linux/linux-development/app/multi_process/day2/my-server
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

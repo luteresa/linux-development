@@ -1,0 +1,6 @@
+1.dd做一个image
+dd if=/dev/zero of=image bs=1024 count=4096
+2.mkfs.ext4 -b 4096做格式化
+mkfs.ext4 -b 4096 image
+mount 创建文件，umout,dumpe2fs获得inode bitmap位置
+重新
