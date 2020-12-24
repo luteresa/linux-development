@@ -18,11 +18,12 @@ void send_fd(int socket, int *fds, int n)
         memset(buf, '\0', sizeof(buf));
         struct iovec io = { .iov_base = &data, .iov_len = 1 };
 
-        msg.msg_iov = &io;
+        msg.msg_iov = &io;      //常规数据,iov可以多段
         msg.msg_iovlen = 1;
-        msg.msg_control = buf;
+        msg.msg_control = buf;  //控制数据
         msg.msg_controllen = sizeof(buf);
 
+		//与控制数据部分重叠
         cmsg = CMSG_FIRSTHDR(&msg);
         cmsg->cmsg_level = SOL_SOCKET;
         cmsg->cmsg_type = SCM_RIGHTS;

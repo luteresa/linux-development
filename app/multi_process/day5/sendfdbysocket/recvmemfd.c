@@ -62,7 +62,7 @@ main(int argc, char *argv[]) {
         if (cfd == -1)
                 handle_error ("Failed to accept incoming connection");
 
-        fds = recv_fd (cfd, 2);
+        fds = recv_fd (cfd, 2); //fds收到fd数组指针
 
         for (int i=0; i<2; ++i) {
                 fprintf (stdout, "Reading from passed fd %d\n", fds[i]);
