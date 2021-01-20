@@ -16,8 +16,7 @@ int child_process()
 int main(int argc, char *argv[])
 {
 	int pid;
-	//pid = vfork();
-	pid = fork();
+	pid = vfork();
 
 	if (pid == -1)
 		exit(-1);

@@ -19,7 +19,6 @@ int main(void)
 		_exit(1);
 	} else {
 		do {
-			//阻塞，等待pid死亡
 			wait_pid=waitpid(pid, &status, WUNTRACED | WCONTINUED);
 
 			if (wait_pid == -1) {

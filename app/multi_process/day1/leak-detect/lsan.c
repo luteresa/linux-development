@@ -22,5 +22,5 @@ void main(void)
 		//	__lsan_do_leak_check();
 	}
 	printf("main return\n");
-//	_exit(1);
+	_exit(1);
 }
