@@ -1,18 +1,14 @@
 #include <stdio.h>
 int main(void)
 {
-
-	int arr[5];
-	for (int i=0; i < 5; i++) {
-		printf("arr[%d]:%d,",i,arr[i]);
-	}
-	printf("\n");
-	printf("arr size:%d,len=%d\n",sizeof(arr),sizeof(arr)/sizeof(int));
-	memset(arr,0x0, sizeof(arr));
-	for (int i=0; i < 5; i++) {
-		printf("arr[%d]:%d,",i,arr[i]);
+	int i;
+	char str[6]="hello";
+	char reverse_str[6]="";
+	printf("%s\n",str);
+	for (int i=0; i < 5; i++){
+		reverse_str[5-i]=str[i];
 	}
 
-	printf("\n");
+	printf("%s\n",reverse_str);
 	return 0;
 }

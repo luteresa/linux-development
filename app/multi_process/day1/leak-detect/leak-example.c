@@ -2,6 +2,7 @@
 
 void handler (int signum)
 {
+	printf("handle...\n");
 	exit(0);
 }
 

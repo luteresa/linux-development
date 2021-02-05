@@ -15,9 +15,11 @@ int main(void)
 		exit(1);
 	} else 	if (pid==0) {
 		printf("child process id: %ld\n", (long) getpid());
+		sleep(1);
 		pause();//wait for signal...
 		_exit(1);
 	} else {
+		printf("parent process id: %ld\n", (long) getpid());
 		do {
 			wait_pid=waitpid(pid, &status, WUNTRACED | WCONTINUED);
 

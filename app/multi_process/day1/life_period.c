@@ -15,11 +15,11 @@ int main(void)
 		exit(1);
 	} else 	if (pid==0) {
 		printf("child process id: %ld\n", (long) getpid());
-		pause();//wait for signal...
+		//pause();//wait for signal...
 		_exit(1);
 	} else {
 		do {
-			wait_pid=waitpid(pid, &status, WUNTRACED | WCONTINUED);
+			wait_pid=waitpid(pid, &status, WUNTRACED | WCONTINUED);//阻塞，等待pid死亡
 
 			if (wait_pid == -1) {
 				perror("cannot using waitpid function");

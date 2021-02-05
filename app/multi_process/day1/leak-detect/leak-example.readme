@@ -6,3 +6,5 @@ valgrind --tool=memcheck --leak-check=yes ./a.out
 gcc leak-example.c -g -fsanitize=leak
 
 gcc -g  -fsanitize=address lsan.c
+
+LD_PRELOAD=./lsan-helper.so  ./a.out 
