@@ -7,6 +7,7 @@ struct thread_param
 {
 	char info;
 	int num;
+	int time; //ms
 };
 
 void* thread_fun(void* param)
@@ -22,7 +23,7 @@ void* thread_fun(void* param)
 #if  0 /* change to #if 1 for debugging high cpu-loading issues */
 		while(1);
 #else
-		sleep(1);
+		usleep(p->time*1000);
 
 #if 1 /* change to #if 1 for debugging core dump */
 		if (i==10){
@@ -47,6 +48,7 @@ int main(void)
 
 	info1.info='T';
 	info1.num=2000000;
+	info1.time=500;
 
 	printf("main pid:%d, tid:%lu\n",getpid(), pthread_self());
 	
@@ -58,6 +60,7 @@ int main(void)
 
 	info2.info='S';
 	info2.num=300000;
+	info1.time=800;
 	
 	ret=pthread_create(&tid2,NULL,thread_fun,&info2);
 	if(ret==-1){
