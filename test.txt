@@ -1,0 +1,17 @@
+day1-code.tar.bz2
+elf
+kernel
+linux-5.11.2.tar.xz
+Linux_Code_Test
+linux-development
+lsb_release.py
+main0.cpp
+main1.cpp
+main2.cpp
+multi_thread2.docx
+running
+t.c
+tool_linux
+vim
+vim.gz
+vimrc
