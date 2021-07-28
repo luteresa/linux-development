@@ -1,0 +1,2 @@
+sudo systemd-run  -p CPUQuota=25% --unit=test --slice=test ./a.out 4
+sudo systemctl set-property --runtime test.service CPUShares=600 MemoryLimit=500M
