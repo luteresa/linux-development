@@ -1,0 +1,31 @@
+00400000-00401000 r-xp 00000000 08:07 24641952                           /home/leon/work/myHub/linux/linux-development/mm/a.out
+00600000-00601000 r--p 00000000 08:07 24641952                           /home/leon/work/myHub/linux/linux-development/mm/a.out
+00601000-00602000 rw-p 00001000 08:07 24641952                           /home/leon/work/myHub/linux/linux-development/mm/a.out
+00d4d000-00d7f000 rw-p 00000000 00:00 0                                  [heap]
+7f502530f000-7f5025326000 r-xp 00000000 08:07 24659418                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5025326000-7f5025525000 ---p 00017000 08:07 24659418                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5025525000-7f5025526000 r--p 00016000 08:07 24659418                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5025526000-7f5025527000 rw-p 00017000 08:07 24659418                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5025527000-7f502562f000 r-xp 00000000 08:07 24643869                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f502562f000-7f502582e000 ---p 00108000 08:07 24643869                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f502582e000-7f502582f000 r--p 00107000 08:07 24643869                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f502582f000-7f5025830000 rw-p 00108000 08:07 24643869                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f5025830000-7f50259f0000 r-xp 00000000 08:07 24643865                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f50259f0000-7f5025bf0000 ---p 001c0000 08:07 24643865                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5025bf0000-7f5025bf4000 r--p 001c0000 08:07 24643865                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5025bf4000-7f5025bf6000 rw-p 001c4000 08:07 24643865                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5025bf6000-7f5025bfa000 rw-p 00000000 00:00 0 
+7f5025bfa000-7f5025dcd000 r-xp 00000000 08:07 25211956                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7f5025dcd000-7f5025fcc000 ---p 001d3000 08:07 25211956                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7f5025fcc000-7f5025fd7000 r--p 001d2000 08:07 25211956                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7f5025fd7000-7f5025fda000 rw-p 001dd000 08:07 25211956                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7f5025fda000-7f5025fdd000 rw-p 00000000 00:00 0 
+7f5025fdd000-7f5026003000 r-xp 00000000 08:07 24643876                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f50261ce000-7f50261d4000 rw-p 00000000 00:00 0 
+7f5026202000-7f5026203000 r--p 00025000 08:07 24643876                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f5026203000-7f5026204000 rw-p 00026000 08:07 24643876                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f5026204000-7f5026205000 rw-p 00000000 00:00 0 
+7fffa1b7a000-7fffa1b9b000 rw-p 00000000 00:00 0                          [stack]
+7fffa1be1000-7fffa1be4000 r--p 00000000 00:00 0                          [vvar]
+7fffa1be4000-7fffa1be6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
